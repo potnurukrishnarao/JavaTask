@@ -6,7 +6,8 @@ public class AdvancedCalculator {
         boolean quit = false;
 
         // Main loop to keep the calculator running until the user decides to quit
-        while (!quit) {
+        while (!quit)
+        {
             System.out.println("Enter the operation (+, -, *, /, ^) or 'quit' to exit:");
             String operation = scanner.nextLine();
 
