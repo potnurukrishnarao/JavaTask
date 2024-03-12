@@ -1,11 +1,12 @@
+java
 import java.util.Scanner;
 
-public class Calculator {
+public class AdvancedCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
 
-        // Main loop to keep the calculator running until user decides to quit
+        // Main loop to keep the calculator running until the user decides to quit
         while (!quit) {
             System.out.println("Enter the operation (+, -, *, /, ^) or 'quit' to exit:");
             String operation = scanner.nextLine();
@@ -18,11 +19,11 @@ public class Calculator {
                 case "/":
                 case "^":
                     System.out.println("Enter first number:");
-                    double num1 = scanner.nextDouble();
+                    double num1 = scanner.nextDouble(); // Read the first number
                     System.out.println("Enter second number:");
-                    double num2 = scanner.nextDouble();
-                    double result = calculate(operation, num1, num2);
-                    System.out.println("Result: " + result);
+                    double num2 = scanner.nextDouble(); // Read the second number
+                    double result = calculate(operation, num1, num2); // Perform calculation
+                    System.out.println("Result: " + result); // Display the result
                     break;
                 // Quit the calculator if user inputs "quit"
                 case "quit":
@@ -35,7 +36,7 @@ public class Calculator {
             }
             scanner.nextLine(); // Consume newline
         }
-        scanner.close();
+        scanner.close(); // Close the scanner
     }
 
     // Method to perform the calculation based on the operation provided
@@ -53,13 +54,13 @@ public class Calculator {
                 } else {
                     // Handle division by zero
                     System.out.println("Error: Division by zero.");
-                    return Double.NaN;
+                    return Double.NaN; // Return NaN (Not a Number) for division by zero
                 }
             case "^":
-                return Math.pow(num1, num2);
+                return Math.pow(num1, num2); // Calculate num1 raised to the power of num2
             default:
                 // Handle invalid operation
-                return Double.NaN;
+                return Double.NaN; // Return NaN for invalid operation
         }
     }
 }
