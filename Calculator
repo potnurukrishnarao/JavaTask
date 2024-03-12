@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = false;
+
+        // Main loop to keep the calculator running until user decides to quit
+        while (!quit) {
+            System.out.println("Enter the operation (+, -, *, /, ^) or 'quit' to exit:");
+            String operation = scanner.nextLine();
+
+            switch (operation) {
+                // Perform calculation based on user input
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                case "^":
+                    System.out.println("Enter first number:");
+                    double num1 = scanner.nextDouble();
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    double result = calculate(operation, num1, num2);
+                    System.out.println("Result: " + result);
+                    break;
+                // Quit the calculator if user inputs "quit"
+                case "quit":
+                    quit = true;
+                    break;
+                // Handle invalid input
+                default:
+                    System.out.println("Invalid operation. Try again.");
+                    break;
+            }
+            scanner.nextLine(); // Consume newline
+        }
+        scanner.close();
+    }
+
+    // Method to perform the calculation based on the operation provided
+    public static double calculate(String operation, double num1, double num2) {
+        switch (operation) {
+            case "+":
+                return num1 + num2;
+            case "-":
+                return num1 - num2;
+            case "*":
+                return num1 * num2;
+            case "/":
+                if (num2 != 0) {
+                    return num1 / num2;
+                } else {
+                    // Handle division by zero
+                    System.out.println("Error: Division by zero.");
+                    return Double.NaN;
+                }
+            case "^":
+                return Math.pow(num1, num2);
+            default:
+                // Handle invalid operation
+                return Double.NaN;
+        }
+    }
+}
