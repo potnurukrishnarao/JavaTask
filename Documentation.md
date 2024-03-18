@@ -122,6 +122,5 @@ public class AdvancedCalculator {
 
 Program images :
 
-![Screenshot 2024-03-18 123414](https://github.com/potnurukrishnarao/JavaTask/assets/163103947/3fd71e08-0082-49ad-9c4c-47106005a82c)
-![Screenshot 2024-03-18 123427](https://github.com/potnurukrishnarao/JavaTask/assets/163103947/93f39eae-5ca9-4a4c-8789-5b7293e19a9e)
-
+![Screenshot 2024-03-18 123414](https://github.com/potnurukrishnarao/JavaTask/assets/163103947/410a8b9e-0e97-47bc-9f21-68974cfc0b99)
+![Screenshot 2024-03-18 123427](https://github.com/potnurukrishnarao/JavaTask/assets/163103947/5987ae28-e9c7-45b0-88e8-162cca98250d)
